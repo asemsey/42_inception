@@ -1,4 +1,10 @@
 - compose cheatsheet:	https://devhints.io/docker-compose
+- usefult yt vid:		https://www.youtube.com/watch?v=GG2k-La5t3o
+- and another:			https://www.youtube.com/watch?v=gEceSAJI_3s
+- php-fpm:				https://medium.com/@mgonzalezbaile/demystifying-nginx-and-php-fpm-for-php-developers-bba548dd38f9
+- lemp stack tutorial:	https://docs.vultr.com/how-to-install-nginx-mariadb--php-lemp-on-debian-11-99568
+- another lemp:			https://www.youtube.com/watch?v=qdpIPC0PXMw
+- inception tutorial:	https://tuto.grademe.fr/inception/
 
 VM TROUBLES
 - use ubuntu desktop

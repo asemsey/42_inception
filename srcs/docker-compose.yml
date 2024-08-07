@@ -7,12 +7,23 @@ services:
       - .env
     ports:
       - "443:443"
-    # networks:
-    #   - inception
+    networks:
+      - inception
+  mariadb:
+    container_name: mariadb
+    build: ./requirements/mariadb
+    restart: always
+    env_file:
+      - .env
+    environment:
+      - SQL_DATABASE=${SQL_DATABASE}
+      - SQL_USER=${SQL_USER}
+      - SQL_PASSWORD=${SQL_PASSWORD}
+      - SQL_ROOT_PASSWORD=${SQL_ROOT_PASSWORD}
+    ports:
+      - "3307:3306"
+    networks:
+      - inception
 
-# networks:
-#   inception:
-
-# volumes:
-#   v_mariadb:
-#   v_wordpress:
+networks:
+  inception:
