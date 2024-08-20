@@ -5,6 +5,7 @@
 - lemp stack tutorial:	https://docs.vultr.com/how-to-install-nginx-mariadb--php-lemp-on-debian-11-99568
 - another lemp:			https://www.youtube.com/watch?v=qdpIPC0PXMw
 - inception tutorial:	https://tuto.grademe.fr/inception/
+- php-fpm config:		https://myjeeva.com/php-fpm-configuration-101.html
 
 VM TROUBLES
 - use ubuntu desktop

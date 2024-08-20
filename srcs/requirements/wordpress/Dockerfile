@@ -10,7 +10,7 @@ RUN cd /var/www && tar -xvf latest.tar.gz && rm latest.tar.gz
 
 RUN chown -R root:root /var/www/wordpress
 
-# ...
+COPY ./conf/www.conf /etc/php/7.4/fpm/pool.d
 
 # docker build -t my_wp .
 # docker run --rm -it my_wp
