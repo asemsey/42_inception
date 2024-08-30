@@ -11,6 +11,8 @@ services:
       - .env
     restart: always
   nginx:
+    depends_on:
+      - wordpress
     container_name: nginx
     build: ./requirements/nginx
     image: nginx
@@ -24,6 +26,8 @@ services:
       - .env
     restart: always
   wordpress:
+    depends_on:
+      - mariadb
     container_name: wordpress
     build: ./requirements/wordpress
     image: wordpress
@@ -42,12 +46,14 @@ networks:
 
 volumes:
   mariadb:
-    name: mariadb
     driver: local
-    driver-opts:
+    driver_opts:
+      type: none
       device: ./requirements/mariadb/data
+      o: bind
   wordpress:
-    name: wordpress
     driver: local
-    driver-opts:
+    driver_opts:
+      type: none
       device: ./requirements/wordpress/data
+      o: bind

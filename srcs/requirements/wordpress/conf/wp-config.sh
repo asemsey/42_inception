@@ -2,9 +2,9 @@
 
 cd /var/www/html
 
-rm -rf ./*
-
 wp core download --allow-root
+
+sleep 10
 
 wp config create	--allow-root --force \
 	--url="$WP_URL" \
@@ -25,4 +25,4 @@ wp user create	--allow-root \
 	$WP_USER_NAME $WP_USER_EMAIL \
 	--user_pass="$WP_USER_PASS"
 
-php-fpm7.3 -F
+php-fpm7.4 -F

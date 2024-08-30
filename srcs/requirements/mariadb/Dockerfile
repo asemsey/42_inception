@@ -7,7 +7,7 @@ RUN apt-get update && \
 RUN mkdir -p /var/lib/mysql /var/run/mysqld && \
 	chown -R mysql:mysql /var/lib/mysql /var/run/mysqld
 
-COPY ./conf/51-server.cnf /etc/mysql/mariadb.conf.d/51-server.cnf
+COPY ./conf/99-server.cnf /etc/mysql/mariadb.conf.d/99-server.cnf
 RUN mysql_install_db --user=mysql --datadir=/var/lib/mysql
 
 COPY ./conf/script.sh usr/local/bin/
