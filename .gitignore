@@ -1,3 +1,2 @@
-srcs/.env
-secrets
 .gitignore
+srcs/.env

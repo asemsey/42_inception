@@ -46,12 +46,14 @@ networks:
 
 volumes:
   mariadb:
+    name: mariadb
     driver: local
     driver_opts:
       type: none
       device: ./requirements/mariadb/data
       o: bind
   wordpress:
+    name: wordpress
     driver: local
     driver_opts:
       type: none

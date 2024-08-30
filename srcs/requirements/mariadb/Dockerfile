@@ -16,6 +16,3 @@ RUN chmod +x /usr/local/bin/script.sh
 EXPOSE 3306
 
 CMD [ "/usr/local/bin/script.sh" ]
-
-# docker build -t my_db .
-# docker run --rm -it my_db
