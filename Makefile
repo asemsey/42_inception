@@ -1,7 +1,5 @@
 LOGIN		= asemsey
 COMPOSE		= ./srcs/docker-compose.yml
-SERVICES	= mariadb nginx wordpress
-VOLUMES		= mariadb wordpress
 
 all: up
 
@@ -25,8 +23,7 @@ reset: down
 	@docker rmi -f $$(docker images -qa) 2>/dev/null || true
 	@echo "Removing all volumes..."
 	@docker volume rm $$(docker volume ls -q) 2>/dev/null || true
-	# @rm -rf /home/$(LOGIN)/data/mariadb /home/$(LOGIN)/data/wordpress
-	# @mkdir /home/$(LOGIN)/data/mariadb /home/$(LOGIN)/data/wordpress
+	@sudo rm -rf /home/$(LOGIN)/data/mariadb/* /home/$(LOGIN)/data/wordpress/*
 
 clear_docker: reset
 	@docker system prune -f

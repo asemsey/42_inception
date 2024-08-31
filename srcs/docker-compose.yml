@@ -50,12 +50,12 @@ volumes:
     driver: local
     driver_opts:
       type: none
-      device: ./requirements/mariadb/data
+      device: /home/asemsey/data/mariadb
       o: bind
   wordpress:
     name: wordpress
     driver: local
     driver_opts:
       type: none
-      device: ./requirements/wordpress/data
+      device: /home/asemsey/data/wordpress
       o: bind
