@@ -4,8 +4,10 @@ cd /var/www/html
 
 wp core download --allow-root
 
+# wait for mariadb to start
 sleep 10
 
+# configure and install wordpress
 wp config create	--allow-root --force \
 	--url="$WP_URL" \
 	--dbname="$SQL_DATABASE" \
@@ -25,4 +27,5 @@ wp user create	--allow-root \
 	$WP_USER_NAME $WP_USER_EMAIL \
 	--user_pass="$WP_USER_PASS"
 
+# run php-fpm
 php-fpm7.4 -F
